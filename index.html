@@ -1,54 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
-  <title>Block Blast Puzzle – Unblocked Blooky Blasta G@me at School</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Block Blast Puzzle (Blooky Blasta) Unblocked at School | StaticQuasar931</title>
 
-  <!-- Canonical & Description -->
-  <link rel="canonical" href="https://staticquasar931.github.io/BlookBlast/">
-  <meta name="description" content="Play Block Blast Puzzle (Blooky Blasta) unblocked at school. A colorful drag-and-drop logic g@me you can enjoy from anywhere! Tetris-style fun with no downloads.">
-  <meta name="keywords" content="block blast, blooky blasta, blocky blast, blook blast puzzle, block blast game, block blast unblocked, blooky blasta game, block puzzle g@me, unblocked g@me at school, school-safe g@mes, staticquasar931, g@mes that work at school, blook blasta, block blast g@me unblocked">
-  <meta name="author" content="StaticQuasar931">
+  <!-- Canonical & Meta Info -->
+  <link rel="canonical" href="https://sites.google.com/view/staticquasar931/gm3z/blooky-blasta/normal-scrolling-bloocka-blast">
+  <meta name="description" content="Play Block Blast Puzzle (aka Blooky Blasta) – a colorful logic g@me that works at school. Drag blocks, clear lines, and challenge your brain – no download needed.">
+  <meta name="keywords" content="block blast, blooky blasta, blocky blast, blook blast puzzle, block puzzle game, unblocked puzzle game, play at school, logic game Chromebook, block blast unblocked, staticquasar931 puzzle, drop blocks g@me, colorful puzzle g@me, unblocked tetris-style game, free drag and drop game, blook blasta unbl0cked, fun school games, block blast challenge">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Block Blast Puzzle – Play Blooky Blasta Unblocked">
-  <meta property="og:description" content="Enjoy Block Blast Puzzle (aka Blooky Blasta) unblocked on any device. Great puzzle g@me for school, work, or home!">
+  <meta property="og:title" content="Play Block Blast Puzzle (Blooky Blasta) – Unblocked at School">
+  <meta property="og:description" content="Block Blast Puzzle (Blooky Blasta) is unblocked and perfect for Chromebooks. A school-safe logic game you can enjoy anywhere.">
   <meta property="og:image" content="https://staticquasar931.github.io/BlookBlast/cover.jpg">
-  <meta property="og:url" content="https://staticquasar931.github.io/BlookBlast/">
+  <meta property="og:url" content="https://sites.google.com/view/staticquasar931/gm3z/blooky-blasta/normal-scrolling-bloocka-blast">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Block Blast Puzzle – Unblocked at School">
-  <meta name="twitter:description" content="Play the block puzzle hit Blooky Blasta – school-safe, unbl0cked, and full screen fun!">
+  <meta name="twitter:title" content="Block Blast Puzzle – Blooky Blasta Unblocked at School">
+  <meta name="twitter:description" content="Blooky Blasta (Block Blast Puzzle) – drag blocks, beat levels, and challenge your brain in this free unblocked logic game.">
   <meta name="twitter:image" content="https://staticquasar931.github.io/BlookBlast/cover.jpg">
 
-  <!-- Favicon & Styles -->
+  <!-- Styles -->
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
   <link rel="manifest" href="manifest.webmanifest">
 
-  <!-- Google Ads + Analytics -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5221630201042895" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CC4ZKKC8EF');
-
-    let displayMode = 'browser';
-    let isPwa = false;
-    const mqStandAlone = '(display-mode: fullscreen)';
-    if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
-      displayMode = 'fullscreen';
-      isPwa = true;
-    }
-    gtag('event', 'pwa_check', { 'pwa': isPwa });
-  </script>
-
+  <!-- Static Menu -->
   <style>
     #staticMenu {
       position: fixed;
@@ -82,10 +62,29 @@
       100% { opacity: 1; }
     }
   </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CC4ZKKC8EF');
+  </script>
+
+  <!-- Display Mode Tracking -->
+  <script>
+    let isPwa = false;
+    const mq = '(display-mode: fullscreen)';
+    if (navigator.standalone || window.matchMedia(mq).matches) {
+      isPwa = true;
+    }
+    gtag('event', 'pwa_check', { 'pwa': isPwa });
+  </script>
 </head>
 
 <body>
-  <!-- Static Menu (Top Right) -->
+  <!-- Static Menu -->
   <div id="staticMenu">
     <div id="staticMenuClose" onclick="hideStaticMenu()">✕</div>
     <a href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank">More Unblocked Games by Static</a>
@@ -96,11 +95,12 @@
       document.getElementById('staticMenu').style.display = 'none';
       setTimeout(() => {
         document.getElementById('staticMenu').style.display = 'block';
-      }, 180000); // 3 minutes
+      }, 180000);
     }
+    window.onbeforeunload = () => "Are you sure you want to leave? Progress may not be saved.";
   </script>
 
-  <!-- Unity Game Embed -->
+  <!-- Game Embed -->
   <div id="unity-container">
     <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
     <div id="unity-loading-bar">
@@ -119,31 +119,28 @@
       }
     });
 
-    var canvas = document.querySelector("#unity-canvas");
-    var loadingBar = document.querySelector("#unity-loading-bar");
-    var progressBarFull = document.querySelector("#unity-progress-bar-full");
-    var warningBanner = document.querySelector("#unity-warning");
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingBar = document.querySelector("#unity-loading-bar");
+    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+    const warningBanner = document.querySelector("#unity-warning");
 
     function unityShowBanner(msg, type) {
-      var div = document.createElement('div');
+      const div = document.createElement('div');
       div.innerHTML = msg;
+      div.style = type === 'error' ? 'background:red;padding:10px;' : 'background:yellow;padding:10px;';
       warningBanner.appendChild(div);
-      if (type == 'error') div.style = 'background: red; padding: 10px;';
-      else {
-        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-        setTimeout(() => {
-          warningBanner.removeChild(div);
-        }, 5000);
+      if (type !== 'error') {
+        setTimeout(() => warningBanner.removeChild(div), 5000);
       }
       warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
     }
 
-    var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/BlockBlast1.1-8.loader.js";
-    var config = {
-      dataUrl: buildUrl + "/BlockBlast1.1-8.data.unityweb",
-      frameworkUrl: buildUrl + "/BlockBlast1.1-8.framework.js.unityweb",
-      codeUrl: buildUrl + "/BlockBlast1.1-8.wasm.unityweb",
+    const buildUrl = "Build";
+    const loaderUrl = `${buildUrl}/BlockBlast1.1-8.loader.js`;
+    const config = {
+      dataUrl: `${buildUrl}/BlockBlast1.1-8.data.unityweb`,
+      frameworkUrl: `${buildUrl}/BlockBlast1.1-8.framework.js.unityweb`,
+      codeUrl: `${buildUrl}/BlockBlast1.1-8.wasm.unityweb`,
       streamingAssetsUrl: "StreamingAssets",
       companyName: "reun",
       productName: "Block Blast Puzzle",
@@ -153,21 +150,19 @@
 
     loadingBar.style.display = "block";
 
-    var script = document.createElement("script");
+    const script = document.createElement("script");
     script.src = loaderUrl;
     script.onload = () => {
-      createUnityInstance(canvas, config, (progress) => {
-        progressBarFull.style.width = 100 * progress + "%";
+      createUnityInstance(canvas, config, progress => {
+        progressBarFull.style.width = `${100 * progress}%`;
       }).then(() => {
         loadingBar.style.display = "none";
-      }).catch((message) => {
-        alert(message);
-      });
+      }).catch(alert);
     };
     document.body.appendChild(script);
   </script>
 
-  <!-- Google Ads -->
+  <!-- Ad -->
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-5221630201042895"
@@ -176,14 +171,16 @@
     data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-  <!-- Hidden SEO Content -->
-  <div style="display:none">
-    <h1>Block Blast Puzzle (Blooky Blasta) – Unblocked School G@me</h1>
-    <p>
-      Block Blast Puzzle, also called Blooky Blasta or Blocky Blast, is a colorful puzzle g@me that works perfectly at school or work. Drop blocks, clear lines, and beat your high score with no downloads or installs. Try this unbl0cked puzzle g@me now on 
-      <a href="https://sites.google.com/view/staticquasar931/gm3z/blooky-blasta/normal-scrolling-bloocka-blast">StaticQuasar931’s official game page</a> or browse 
-      <a href="https://sites.google.com/view/staticquasar931/gm3z">all Static games</a>.
-    </p>
-  </div>
+  <!-- Hidden SEO Block -->
+  <section style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); white-space:nowrap;">
+    <h1>Play Block Blast Puzzle (Blooky Blasta) – Unblocked School Puzzle G@me</h1>
+    <p>Welcome to <strong>Block Blast Puzzle</strong>, also known as <strong>Blooky Blasta</strong> or <strong>Blocky Blast</strong> – a school-safe, unblocked logic g@me where you drag colorful pieces to clear lines and keep the board from filling. Perfect for Chromebooks, classrooms, or quiet home play. Works with no download or account. Try it today on <a href="https://sites.google.com/view/staticquasar931/gm3z">StaticQuasar931</a>.</p>
+    <ul>
+      <li>Playable on all devices</li>
+      <li>No login or download required</li>
+      <li>100% unblocked & school-friendly</li>
+      <li><a href="https://sites.google.com/view/staticquasar931/gm3z/3-slices">Try 3 Slices next</a></li>
+    </ul>
+  </section>
 </body>
 </html>
