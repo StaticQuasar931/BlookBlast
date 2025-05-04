@@ -28,12 +28,11 @@
   <link rel="stylesheet" href="TemplateData/style.css">
   <link rel="manifest" href="manifest.webmanifest">
 
-  <!-- Static Menu -->
   <style>
     #staticMenu {
       position: fixed;
       top: 10px;
-      right: 10px;
+      left: 10px;
       background: rgba(0, 0, 0, 0.85);
       color: white;
       padding: 10px 16px;
@@ -41,9 +40,8 @@
       font-family: sans-serif;
       font-size: 15px;
       font-weight: bold;
-      z-index: 9999;
+      z-index: 999999; /* Highest priority */
       animation: twinkle 1.5s infinite alternate;
-      transition: all 0.3s ease;
     }
     #staticMenu a {
       color: #00ffcc;
@@ -63,28 +61,21 @@
     }
   </style>
 
-  <!-- Google Analytics -->
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC4ZKKC8EF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-CC4ZKKC8EF');
-  </script>
-
-  <!-- Display Mode Tracking -->
-  <script>
-    let isPwa = false;
-    const mq = '(display-mode: fullscreen)';
-    if (navigator.standalone || window.matchMedia(mq).matches) {
-      isPwa = true;
+    if (navigator.standalone || window.matchMedia('(display-mode: fullscreen)').matches) {
+      gtag('event', 'pwa_check', { 'pwa': true });
     }
-    gtag('event', 'pwa_check', { 'pwa': isPwa });
   </script>
 </head>
 
 <body>
-  <!-- Static Menu -->
+  <!-- Static Menu Top-Left -->
   <div id="staticMenu">
     <div id="staticMenuClose" onclick="hideStaticMenu()">✕</div>
     <a href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank">More Unblocked Games by Static</a>
@@ -92,15 +83,17 @@
 
   <script>
     function hideStaticMenu() {
-      document.getElementById('staticMenu').style.display = 'none';
-      setTimeout(() => {
-        document.getElementById('staticMenu').style.display = 'block';
-      }, 180000);
+      const menu = document.getElementById('staticMenu');
+      menu.style.display = 'none';
+      setTimeout(() => { menu.style.display = 'block'; }, 180000);
     }
-    window.onbeforeunload = () => "Are you sure you want to leave? Progress may not be saved.";
+
+    window.onbeforeunload = function () {
+      return "Are you sure you want to leave? Your progress may not be saved.";
+    };
   </script>
 
-  <!-- Game Embed -->
+  <!-- Unity Embed -->
   <div id="unity-container">
     <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
     <div id="unity-loading-bar">
@@ -113,25 +106,23 @@
   </div>
 
   <script>
-    window.addEventListener("load", function () {
+    window.addEventListener("load", () => {
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("ServiceWorker.js");
       }
     });
 
-    const canvas = document.querySelector("#unity-canvas");
-    const loadingBar = document.querySelector("#unity-loading-bar");
-    const progressBarFull = document.querySelector("#unity-progress-bar-full");
-    const warningBanner = document.querySelector("#unity-warning");
+    const canvas = document.getElementById("unity-canvas");
+    const loadingBar = document.getElementById("unity-loading-bar");
+    const progressBarFull = document.getElementById("unity-progress-bar-full");
+    const warningBanner = document.getElementById("unity-warning");
 
     function unityShowBanner(msg, type) {
       const div = document.createElement('div');
       div.innerHTML = msg;
       div.style = type === 'error' ? 'background:red;padding:10px;' : 'background:yellow;padding:10px;';
       warningBanner.appendChild(div);
-      if (type !== 'error') {
-        setTimeout(() => warningBanner.removeChild(div), 5000);
-      }
+      if (type !== 'error') setTimeout(() => warningBanner.removeChild(div), 5000);
       warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
     }
 
@@ -162,25 +153,10 @@
     document.body.appendChild(script);
   </script>
 
-  <!-- Ad -->
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-5221630201042895"
-    data-ad-slot="3988294629"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
   <!-- Hidden SEO Block -->
-  <section style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); white-space:nowrap;">
-    <h1>Play Block Blast Puzzle (Blooky Blasta) – Unblocked School Puzzle G@me</h1>
-    <p>Welcome to <strong>Block Blast Puzzle</strong>, also known as <strong>Blooky Blasta</strong> or <strong>Blocky Blast</strong> – a school-safe, unblocked logic g@me where you drag colorful pieces to clear lines and keep the board from filling. Perfect for Chromebooks, classrooms, or quiet home play. Works with no download or account. Try it today on <a href="https://sites.google.com/view/staticquasar931/gm3z">StaticQuasar931</a>.</p>
-    <ul>
-      <li>Playable on all devices</li>
-      <li>No login or download required</li>
-      <li>100% unblocked & school-friendly</li>
-      <li><a href="https://sites.google.com/view/staticquasar931/gm3z/3-slices">Try 3 Slices next</a></li>
-    </ul>
+  <section style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap;">
+    <h1>Play Block Blast Puzzle (Blooky Blasta) – Unblocked G@me for School</h1>
+    <p><strong>Blooky Blasta</strong>, also known as Block Blast Puzzle, is a fun and unbl0cked drag-and-drop g@me playable at school or work. Fit the pieces to clear rows and challenge your brain. Runs in full screen and doesn’t need downloads. Play on <a href="https://sites.google.com/view/staticquasar931/gm3z">StaticQuasar931</a> now!</p>
   </section>
 </body>
 </html>
